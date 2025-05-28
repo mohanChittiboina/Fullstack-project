@@ -1,0 +1,169 @@
+/* Cards Section */
+.card-cont {
+  background-color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+/* Individual Card */
+.card-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Inside Card Details */
+.incard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.cardfoot {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  color: #ffc107;
+}
+
+/* Reusable Button */
+.card-button {
+  background-color: navy;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.card-button:hover {
+  background-color: #001f4d;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .card-cont {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .custom-card {
+    width: 90%;
+  }
+}
+
+/* Home Intro Section */
+.home-intro {
+  text-align: center;
+  background-color: #12122b;
+  color: white;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.home-intro p {
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Outro Section */
+.home-outro {
+  background-color: #0f0f1e;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-outro h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00d1b2;
+}
+
+.home-outro ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.home-outro ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: #ddd;
+}
+
+.home-outro ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #00ff99;
+}
+
+.home-outro p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.05rem;
+  color: #aaa;
+}

@@ -1,0 +1,112 @@
+.courses-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+.courses-intro h1 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 15px;
+}
+
+.courses-intro p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Existing CSS below already covers layout, just make sure this is included above */
+
+
+.courses-container {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #121212;
+  background-color: #f9f9f9;
+}
+
+.courses-container h1 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 30px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  padding: 25px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgb(0 122 204 / 0.3);
+}
+
+.image-wrapper {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-image {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.course-card h3 {
+  margin-bottom: 12px;
+  color: #007acc;
+  font-size: 1.3rem;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  line-height: 1.4;
+  padding: 0 5px;
+}
+
+.enroll-btn {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 11px 26px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.enroll-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}

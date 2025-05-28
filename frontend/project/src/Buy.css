@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(to right, #2e3192, #1bffff);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.checkout-container {
+  max-width: 450px;
+  margin: 4rem auto;
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+.checkout-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  color: #2c3e50;
+}
+
+.checkout-form input {
+  width: 90%;
+  padding: 14px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.checkout-form input:focus {
+  outline: none;
+  border-color: #2e3192;
+  background-color: #fff;
+  box-shadow: 0 0 5px #2e3192;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex-row input {
+  flex: 1;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #1bffff, #2e3192);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.purchase-button:hover {
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #2e3192, #1bffff);
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
