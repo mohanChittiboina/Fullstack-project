@@ -399,7 +399,9 @@ input{
   margin-bottom: 25px;
   color: #00d1b2;
 }
-
+.reg{
+  color: #000dff;
+}
 .register-form label {
   margin-top: 15px;
   display: block;
