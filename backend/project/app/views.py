@@ -17,18 +17,15 @@ def register(request):
             email = data.get('email')
             password = data.get('password')
 
-            # Check for empty fields
             if not username or not email or not password:
-                return JsonResponse({"Error": "Please fill all details"}, status=400)
+                return JsonResponse({"Error": "Fill all details"}, status=400)
 
-            # Check if user already exists
             if User.objects.filter(username=username).exists():
-                return JsonResponse({"Exists": "Username already exists"}, status=400)
+                return JsonResponse({"Exists": "User already exists"}, status=400)
 
-            # Create the user
-            User.objects.create_user(username=username, email=email, password=password)
+            user = User.objects.create_user(username=username, email=email, password=password)
 
-            # Send welcome email
+            # Send Welcome Email
             subject = "🎉 Welcome to Skilledge Academy!"
             message = f"""
 Hi {username},
@@ -37,21 +34,25 @@ Welcome to Skilledge Academy! 🚀
 
 We're excited to have you on board. Explore our platform, take interactive quizzes, earn certificates, and start your learning journey today!
 
+You can Find My Project Here 👉 https://github.com/mohanChittiboina/Fullstack-project
 
 If you have any questions, feel free to reach out.
 
-Happy Learning! 📚  
+Happy Learning! 📚
 - The Skilledge Team
 """
-            send_mail(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
+            try:
+                send_mail(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
+            except Exception as e:
+                print(f"Email sending failed: {e}")
 
-            return JsonResponse({"Success": "Registered successfully and email sent!"}, status=200)
+            return JsonResponse({"Success": "Registered successfully"}, status=200)
 
         except Exception as e:
-            return JsonResponse({"Error": "Something went wrong", "details": str(e)}, status=500)
+            return JsonResponse({"error": f"Something went wrong: {str(e)}"}, status=500)
 
-    else:
-        return JsonResponse({"Error": "Invalid request method"}, status=405)
+    return JsonResponse({"Error": "Use correct HTTP method"}, status=405)
+
 
 @csrf_exempt
 def loginview(request):

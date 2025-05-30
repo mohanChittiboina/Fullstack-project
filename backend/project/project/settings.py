@@ -133,5 +133,5 @@ EMAIL_HOST = 'smtp.gmail.com'  # or your provider's SMTP
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'teamcobragaming77@gmail.com'
-EMAIL_HOST_PASSWORD = 'amul fqjp ghgq bjxd'
+EMAIL_HOST_PASSWORD = 'qpvq bwdd vypu lhqo'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
