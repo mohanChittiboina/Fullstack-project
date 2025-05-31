@@ -22,6 +22,7 @@ const Navbar = () => {
     const ver =()=>{
         if (localStorage.getItem("login")=="false"){
             alert("Login....")
+            navigate('/login')
         }
         else{
             navigate('/assig')
